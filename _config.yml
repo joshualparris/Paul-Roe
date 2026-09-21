@@ -1,0 +1,14 @@
+title: Remembering Dr Paul Roe
+description: Memorial website for Dr Paul Roe — The Outback Historian.
+exclude:
+  - README.md
+  - gmail
+  - drive
+  - calendar
+  - github
+  - library
+  - web
+  - private-archive
+  - .github
+  - "*.md"
+keep_files: []

@@ -1,17 +1,16 @@
-# Paul Roe Archive
+# Remembering Paul Roe
 
-Private research archive compiled from Josh's connected sources.
+Public source repository for the **Remembering Paul Roe** memorial website.
 
-## Scope
+## Live memorial
 
-This repository indexes references to **Paul Roe** and **paul.roe@cornerstone.edu.au** found across connected Gmail, Google Drive, Google Calendar, GitHub, and ChatGPT Library sources.
+- Vercel: https://remembering-paul-roe.vercel.app/
+- GitHub Pages: https://joshualparris.github.io/Paul-Roe/
 
-The archive is organised by source. Gmail entries preserve message context. Google Drive entries preserve file metadata and source links; selected high-relevance Drive results also include extracted text where available. Calendar, GitHub, and Library matches are indexed separately.
+## Website source
 
-## Privacy
+The public memorial lives in `site/`.
 
-This repository is private. The source material may include personal correspondence and other non-public information. Keep the repository private unless the underlying material is reviewed for sharing.
+GitHub Pages deployment uploads only that directory. The repository root `index.html` redirects to the memorial for compatibility with project hosting.
 
-## Generated
-
-Compiled 19 September 2026 (Australia/Sydney).
+Private research material, correspondence, source exports and internal archive data are kept separately and are not part of this public repository.

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b7ced1"/>
+      <stop offset=".62" stop-color="#e8d0ac"/>
+      <stop offset="1" stop-color="#c37a4a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#sky)"/>
+  <circle cx="982" cy="143" r="68" fill="#ffe1a6" opacity=".72"/>
+  <path d="M0 510 C260 430 450 520 690 468 C875 427 1028 446 1200 420 L1200 630 L0 630Z" fill="#a65738" opacity=".8"/>
+  <path d="M0 550 C225 486 418 562 640 514 C886 460 1014 523 1200 482 L1200 630 L0 630Z" fill="#653c2f" opacity=".65"/>
+  <text x="82" y="100" font-family="Arial, sans-serif" font-size="22" letter-spacing="5" fill="#6c3928">IN LOVING MEMORY · 19 SEPTEMBER 2026</text>
+  <text x="80" y="245" font-family="Georgia, serif" font-size="86" fill="#2d2924">Remembering</text>
+  <text x="80" y="348" font-family="Georgia, serif" font-size="112" font-style="italic" fill="#743621">Paul Roe</text>
+  <text x="84" y="408" font-family="Arial, sans-serif" font-size="27" fill="#473930">Historian · Storyteller · Teacher · The Outback Historian</text>
+  <text x="84" y="475" font-family="Georgia, serif" font-size="29" font-style="italic" fill="#513e32">“Making the invisible story visible.”</text>
+</svg>

@@ -1,0 +1,10 @@
+{
+  "name": "Remembering Paul Roe",
+  "short_name": "Paul Roe",
+  "description": "A memorial to Paul Roe — The Outback Historian.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f8f1e6",
+  "theme_color": "#9a4f32",
+  "icons": []
+}

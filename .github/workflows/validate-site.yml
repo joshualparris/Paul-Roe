@@ -1,0 +1,47 @@
+name: Validate memorial site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+      - ".github/workflows/validate-site.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Check required public files
+        run: |
+          test -f site/index.html
+          test -f site/styles.css
+          test -f site/script.js
+          test -f site/favicon.svg
+          test -f site/social-card.svg
+
+      - name: Check private archive is not inside public site
+        run: |
+          test ! -d site/gmail
+          test ! -d site/drive
+          test ! -d site/library
+
+      - name: Serve and smoke-test
+        run: |
+          python3 -m http.server 8080 --directory site >/tmp/paul-roe-site.log 2>&1 &
+          server_pid=$!
+          trap "kill $server_pid" EXIT
+          sleep 1
+          curl --fail --silent --show-error http://127.0.0.1:8080/ > /tmp/index.html
+          curl --fail --silent --show-error http://127.0.0.1:8080/styles.css > /dev/null
+          curl --fail --silent --show-error http://127.0.0.1:8080/script.js > /dev/null
+          curl --fail --silent --show-error http://127.0.0.1:8080/favicon.svg > /dev/null
+          grep -q "Remembering" /tmp/index.html
+          grep -q "Paul Roe" /tmp/index.html
+          grep -q "The Outback Historian" /tmp/index.html
