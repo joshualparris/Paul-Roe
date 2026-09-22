@@ -659,3 +659,47 @@ footer { padding: 33px 0; background: #20282b; color: #e7ded4; }
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
+
+
+/* Temporary family service notice */
+.service-notice {
+  position: relative;
+  z-index: 4;
+  padding: 42px 0;
+  background: #efe1cd;
+}
+.service-notice-card {
+  padding: 34px 38px;
+  border: 1px solid rgba(154,79,50,.22);
+  border-radius: 24px;
+  background: var(--white);
+  box-shadow: 0 18px 50px rgba(72,47,31,.09);
+  text-align: center;
+}
+.service-notice-mark {
+  margin-bottom: 8px;
+  color: var(--rust);
+  font-size: 20px;
+}
+.service-notice h2 {
+  margin: 0 0 18px;
+  font: 400 clamp(30px, 4vw, 42px)/1.1 var(--serif);
+  letter-spacing: -.02em;
+}
+.service-notice p {
+  margin: 0 auto 12px;
+  max-width: 680px;
+  font-size: 17px;
+}
+.service-notice-footnote {
+  margin-top: 20px !important;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px !important;
+}
+@media (max-width: 620px) {
+  .service-notice { padding: 28px 0; }
+  .service-notice-card { padding: 27px 22px; border-radius: 20px; }
+  .service-notice p { font-size: 16px; }
+}
