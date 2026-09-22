@@ -129,3 +129,34 @@ function formatMemoryText(value) {
 }
 
 loadApprovedMemories();
+
+/* Private memorial traffic counter.
+   Records anonymous page-view events to Vercel runtime logs.
+   No analytics figures are exposed to site visitors. */
+(() => {
+  if (window.location.hostname !== 'remembering-paul-roe.vercel.app') return;
+
+  const key = 'paul-memorial-visitor-id';
+  let visitorId = localStorage.getItem(key);
+
+  if (!visitorId) {
+    visitorId = (window.crypto?.randomUUID?.() ||
+      Math.random().toString(36).slice(2) + Date.now().toString(36));
+    localStorage.setItem(key, visitorId);
+  }
+
+  const payload = JSON.stringify({
+    visitorId,
+    path: window.location.pathname,
+    referrer: document.referrer
+  });
+
+  fetch('/api/track', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: payload,
+    keepalive: true,
+    credentials: 'omit'
+  }).catch(() => {});
+})();
+
